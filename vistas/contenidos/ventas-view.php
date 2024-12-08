@@ -1,10 +1,3 @@
-<?php
-if ($_SESSION['rol_sca'] != "Administrador") {
-    echo $lc->forzar_cierre_sesion_controlador();
-    exit();
-}
-?>
-
 <!-- Ventas -->
 <div class="container-fluid">
 
