@@ -26,14 +26,14 @@
         //---------- Modelo para agregar compra_producto -------------//
         protected static function agregar_compra_producto_modelo($datos) {
 
-            $sql = mainModel::conectar()->prepare("INSERT INTO compra_producto (id_compra, cod_producto, cantidad, precio_compra, precio_compra) 
-            VALUES (:Id_compra, :Cod_producto, :Cantidad, :Precio_compra, :Precio_compra);");
+            $sql = mainModel::conectar()->prepare("INSERT INTO compra_producto (id_compra, cod_producto, cantidad, precio_compra, precio_venta) 
+            VALUES (:Id_compra, :Cod_producto, :Cantidad, :Precio_compra, :Precio_venta);");
 
             $sql->bindParam(":Id_compra", $datos['Id_compra']);
             $sql->bindParam(":Cod_producto", $datos['Cod_producto']);
             $sql->bindParam(":Cantidad", $datos['Cantidad']);
             $sql->bindParam(":Precio_compra", $datos['Precio_compra']);
-            $sql->bindParam(":Precio_compra", $datos['Precio_compra']);
+            $sql->bindParam(":Precio_venta", $datos['Precio_venta']);
 
             $sql->execute();
 
